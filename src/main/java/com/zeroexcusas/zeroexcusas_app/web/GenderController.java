@@ -1,6 +1,7 @@
 package com.zeroexcusas.zeroexcusas_app.web;
 
 import com.zeroexcusas.zeroexcusas_app.model.Gender;
+import com.zeroexcusas.zeroexcusas_app.model.Goal;
 import com.zeroexcusas.zeroexcusas_app.model.User;
 import com.zeroexcusas.zeroexcusas_app.service.GenderService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -45,21 +46,40 @@ public class GenderController
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<?> update(@RequestBody Gender user, @PathVariable Integer id) {
+    public ResponseEntity<?> update(@RequestBody Gender gender, @PathVariable Integer id) {
         try {
             Gender existGender = genderService.getGender(id);
-            user.setId(id);
-            genderService.saveGender(user);
-            return new ResponseEntity<>(HttpStatus.OK);
+            if ( existGender != null )
+            {
+                existGender.setName( gender.getName() );
+                genderService.saveGender( existGender );
+                return new ResponseEntity<>( HttpStatus.OK );
+            }
+            else
+            {
+                return new ResponseEntity<Gender>( HttpStatus.NOT_FOUND );
+            }
         } catch (NoSuchElementException e) {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
     }
 
     @DeleteMapping("/{id}")
-    public void delete(@PathVariable Integer id) {
-
-        genderService.deleteGender(id);
+    public ResponseEntity<?> delete(@PathVariable Integer id) {
+        try {
+            Gender existGender = genderService.getGender(id);
+            if ( existGender != null )
+            {
+                genderService.deleteGender( id );
+                return new ResponseEntity<>( HttpStatus.OK );
+            }
+            else
+            {
+                return new ResponseEntity<Goal>( HttpStatus.NOT_FOUND );
+            }
+        } catch (NoSuchElementException e) {
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
     }
 
 }
