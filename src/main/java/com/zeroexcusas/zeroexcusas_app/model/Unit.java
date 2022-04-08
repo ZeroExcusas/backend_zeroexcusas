@@ -37,6 +37,10 @@ public class Unit
     @NotNull
     private LocalDateTime date;
 
+    @Column(name = "systemname")
+    @NotNull
+    private String systemname;
+
     @Column(name = "systemunit")
     @NotNull
     private String systemunit;
