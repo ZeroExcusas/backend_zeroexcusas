@@ -141,6 +141,7 @@ CREATE TABLE zeroexcusas1.unit (
     value real NOT NULL,
     type VARCHAR ( 50 ) NOT NULL,
     date DATETIME NOT NULL,
+    systemname VARCHAR ( 50 ) NOT NULL,
     systemunit VARCHAR ( 50 ) NOT NULL,
     fk_user int,
     fk_progress int,
