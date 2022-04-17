@@ -59,7 +59,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 		httpSecurity.csrf().disable()
 				// dont authenticate this particular request
 				.authorizeRequests().antMatchers("/authenticate", "/register", "/gender/**","/goal/**",
-												 "/activitylevel/**","/trainingfocus/**"
+												 "/activitylevel/**","/trainingfocus/**","/traininglevel/**",
+												 "/trainingplace/**"
 				).permitAll().
 				// all other requests need to be authenticated
 						anyRequest().authenticated().and().
