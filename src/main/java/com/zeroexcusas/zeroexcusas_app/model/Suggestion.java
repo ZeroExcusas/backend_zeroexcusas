@@ -2,6 +2,7 @@ package com.zeroexcusas.zeroexcusas_app.model;
 
 import com.sun.istack.NotNull;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -15,7 +16,7 @@ import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "suggestion", schema = "public" )
-@Data
+@Data @NoArgsConstructor
 public class Suggestion
 {
     @Id

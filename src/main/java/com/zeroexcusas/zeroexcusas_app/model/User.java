@@ -2,6 +2,9 @@ package com.zeroexcusas.zeroexcusas_app.model;
 
 import com.sun.istack.NotNull;
 import lombok.Data;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
@@ -20,7 +23,7 @@ import java.util.List;
 
 @Entity
 @Table(name = "user", schema = "public" )
-@Data
+@Data @NoArgsConstructor
 public class User
 {
     @Id
@@ -167,4 +170,5 @@ public class User
 
     @OneToMany( mappedBy = "_user", fetch = FetchType.LAZY, cascade = CascadeType.PERSIST )
     private List<UserTrainingDayLog> _userTrainingDayLogList;
+
 }
