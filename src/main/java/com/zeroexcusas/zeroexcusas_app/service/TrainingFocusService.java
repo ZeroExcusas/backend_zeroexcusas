@@ -24,7 +24,7 @@ public class TrainingFocusService
     }
 
     public TrainingFocus getTrainingFocus(Integer id) {
-        return trainingFocusRepository.findById( id).get();
+        return trainingFocusRepository.findById(id).get();
     }
 
     public void deleteTrainingFocus(Integer id) {

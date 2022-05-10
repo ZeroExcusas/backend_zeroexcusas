@@ -24,7 +24,7 @@ public class ActivityLevelService
     }
 
     public ActivityLevel getActivityLevel(Integer id) {
-        return activityLevelRepository.findById(id).get();
+        return activityLevelRepository.findById(id).orElse(null);
     }
 
     public void deleteActivityLevel(Integer id) {

@@ -34,8 +34,6 @@ public class UserService implements UserDetailsService {
 
     public User save(User user) {
         java.time.LocalDateTime myDate = LocalDateTime.now();
-
-
         User newUser = new User();
         newUser.setFirstname( user.getFirstname() );
         newUser.setLastname( user.getLastname() );
@@ -45,5 +43,9 @@ public class UserService implements UserDetailsService {
         newUser.setPassword(bcryptEncoder.encode(user.getPassword()));
         newUser.set_gender( user.get_gender() );
         return userRepository.save(newUser);
+    }
+
+    public User findById(Integer userId) {
+        return userRepository.findById(userId).orElse(null);
     }
 }

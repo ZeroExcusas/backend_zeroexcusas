@@ -1,5 +1,6 @@
 package com.zeroexcusas.zeroexcusas_app.model;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.sun.istack.NotNull;
 import lombok.Data;
 import lombok.Getter;
@@ -65,6 +66,7 @@ public class User
 
     @Column( name = "birthday" )
     @NotNull
+    @JsonFormat(shape=JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd HH:mm:ss")
     private LocalDateTime birthday;
 
     @Column( name = "biography" )

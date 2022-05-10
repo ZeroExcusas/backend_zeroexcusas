@@ -1,5 +1,6 @@
 package com.zeroexcusas.zeroexcusas_app.model;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.sun.istack.NotNull;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -30,6 +31,7 @@ public class Suggestion
 
     @Column(name = "date")
     @NotNull
+    @JsonFormat(shape=JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd HH:mm:ss")
     private LocalDateTime date;
 
     @ManyToOne
