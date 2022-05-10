@@ -53,7 +53,7 @@ public class GoalController
     public ResponseEntity<?> update(@RequestBody Goal goal, @PathVariable Integer id) {
         try {
             Goal existGoal = goalService.getGoal( id );
-            if ( existGoal != null )
+            if ( existGoal != null ) //  en el caso de que si exista
             {
                 existGoal.setName( goal.getName() );
                 existGoal.setDescription( goal.getDescription() );
