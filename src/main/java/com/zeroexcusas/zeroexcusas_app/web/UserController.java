@@ -1,5 +1,6 @@
 package com.zeroexcusas.zeroexcusas_app.web;
 
+import com.zeroexcusas.zeroexcusas_app.exceptions.AlexandraException;
 import com.zeroexcusas.zeroexcusas_app.exceptions.ApiRequestException;
 import com.zeroexcusas.zeroexcusas_app.exceptions.NotFoundException;
 import com.zeroexcusas.zeroexcusas_app.exceptions.TimeoutException;
@@ -32,7 +33,8 @@ public class UserController {
     public ResponseEntity<?> addUser(@RequestBody User user, @PathVariable(value = "activityLeveLId") Integer activityLevelId) throws Exception{
         ActivityLevel activityLevel = activityLevelService.getActivityLevel(activityLevelId);
         if (activityLevel == null) {
-           throw new NotFoundException().throwIt(); // Custom Exception
+           //throw new NotFoundException().throwIt(); // Custom Exception
+            throw new AlexandraException().throwIt();
         }
         else {
            // System.out.println("Activity level 2: "+activityLevel.getName());

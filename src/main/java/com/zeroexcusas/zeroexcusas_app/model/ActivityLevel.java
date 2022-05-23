@@ -1,5 +1,6 @@
 package com.zeroexcusas.zeroexcusas_app.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.sun.istack.NotNull;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -20,6 +21,7 @@ import java.util.List;
 @Data @NoArgsConstructor
 public class ActivityLevel
 {
+    @JsonIgnore
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
@@ -33,6 +35,7 @@ public class ActivityLevel
     @Column(name = "description")
     private String description;
 
+    @JsonIgnore
     @OneToMany( mappedBy = "_activityLevel", fetch = FetchType.LAZY, cascade = CascadeType.PERSIST )
     private List<User> _userList;
 }
