@@ -18,4 +18,6 @@ public class UnitSystem {
     @Column(name = "name")
     @NotNull
     private String name;
+
+    // This a comment
 }

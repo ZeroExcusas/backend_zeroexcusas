@@ -1,7 +1,9 @@
 package com.zeroexcusas.zeroexcusas_app.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.sun.istack.NotNull;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
@@ -16,13 +18,13 @@ import java.util.List;
 
 @Entity
 @Table(name = "goal", schema = "public" )
-@Data
+@Data @NoArgsConstructor
 public class Goal
 {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
-    @NotNull
+    @JsonIgnore
     private int id;
 
     @Column(name = "name")
@@ -33,6 +35,7 @@ public class Goal
     @NotNull
     private String description;
 
+    @JsonIgnore
     @OneToMany( mappedBy = "_goal", fetch = FetchType.LAZY, cascade = CascadeType.PERSIST )
     private List<User> _userList;
 }

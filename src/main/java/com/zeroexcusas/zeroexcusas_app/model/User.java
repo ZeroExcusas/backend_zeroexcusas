@@ -1,6 +1,7 @@
 package com.zeroexcusas.zeroexcusas_app.model;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.sun.istack.NotNull;
 import lombok.Data;
 import lombok.Getter;
@@ -167,8 +168,10 @@ public class User
     @OneToMany( mappedBy = "_user", fetch = FetchType.LAZY, cascade = CascadeType.PERSIST )
     private List<TrainingDayLog> _trainingDayLogList;
 
+
     @OneToMany( mappedBy = "_user", fetch = FetchType.LAZY, cascade = CascadeType.PERSIST )
     private List<Comments> _commentsList;
+
 
     @OneToMany( mappedBy = "_user", fetch = FetchType.LAZY, cascade = CascadeType.PERSIST )
     private List<UserTrainingDayLog> _userTrainingDayLogList;

@@ -2,6 +2,7 @@ package com.zeroexcusas.zeroexcusas_app.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.sun.istack.NotNull;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 

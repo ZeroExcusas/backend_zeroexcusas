@@ -1,21 +1,21 @@
 package com.zeroexcusas.zeroexcusas_app.web;
 
-import com.zeroexcusas.zeroexcusas_app.exceptions.AlexandraException;
-import com.zeroexcusas.zeroexcusas_app.exceptions.ApiRequestException;
+import com.zeroexcusas.zeroexcusas_app.common.ZEStrings;
 import com.zeroexcusas.zeroexcusas_app.exceptions.NotFoundException;
-import com.zeroexcusas.zeroexcusas_app.exceptions.TimeoutException;
 import com.zeroexcusas.zeroexcusas_app.model.ActivityLevel;
-import com.zeroexcusas.zeroexcusas_app.model.TrainingFocus;
 import com.zeroexcusas.zeroexcusas_app.model.User;
 import com.zeroexcusas.zeroexcusas_app.service.ActivityLevelService;
 import com.zeroexcusas.zeroexcusas_app.service.UserService;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.tags.Tag;
+import org.springframework.beans.NotReadablePropertyException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/user")
-
+@Tag(name = "Usuarios", description = "Gestion de Usuarios")
 public class UserController {
     @Autowired
     private UserService userService;
@@ -23,9 +23,10 @@ public class UserController {
     @Autowired
     ActivityLevelService activityLevelService;
 
-    @PostMapping("/register")
+
+    @Operation(summary = ZEStrings.MESSAGE_POST)
+    @PostMapping
     public ResponseEntity<?> add(@RequestBody User user) throws Exception{
-        System.out.println(user.toString());
         return ResponseEntity.ok( userService.save(user));
     }
 
@@ -33,8 +34,8 @@ public class UserController {
     public ResponseEntity<?> addUser(@RequestBody User user, @PathVariable(value = "activityLeveLId") Integer activityLevelId) throws Exception{
         ActivityLevel activityLevel = activityLevelService.getActivityLevel(activityLevelId);
         if (activityLevel == null) {
-           //throw new NotFoundException().throwIt(); // Custom Exception
-            throw new AlexandraException().throwIt();
+           throw new NotFoundException().throwIt();
+           // throw new AlexandraException().throwIt();
         }
         else {
            // System.out.println("Activity level 2: "+activityLevel.getName());
