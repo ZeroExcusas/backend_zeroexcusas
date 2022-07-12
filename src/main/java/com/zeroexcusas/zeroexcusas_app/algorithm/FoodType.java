@@ -1,5 +1,7 @@
 package com.zeroexcusas.zeroexcusas_app.algorithm;
 
-public enum GOALTYPE {
-    GAIN, LOSS, KEEP
+public enum FoodType {
+    CARB,
+    PROTEIN,
+    FAT
 }

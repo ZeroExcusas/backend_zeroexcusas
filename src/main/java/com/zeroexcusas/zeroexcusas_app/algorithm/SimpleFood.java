@@ -1,4 +1,4 @@
-package com.zeroexcusas.zeroexcusas_app.algorithm.alx;
+package com.zeroexcusas.zeroexcusas_app.algorithm;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -34,6 +34,27 @@ public class SimpleFood {
                 break;
         }
         return result;
+    }
+
+    public FoodType getMainType() {
+        FoodType type = null;
+        if (proteinPerUnit > carbsPerUnit) {
+            if (proteinPerUnit > fatPerUnit) {
+                type = FoodType.PROTEIN;
+            }
+            else {
+                type = FoodType.FAT;
+            }
+        }
+        else {
+            if (carbsPerUnit > fatPerUnit) {
+                type = FoodType.CARB;
+            }
+            else {
+                type = FoodType.FAT;
+            }
+        }
+        return type;
     }
 
     public int getReferenceUnit() {

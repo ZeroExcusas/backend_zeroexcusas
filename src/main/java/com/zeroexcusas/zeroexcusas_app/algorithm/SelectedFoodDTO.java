@@ -1,4 +1,4 @@
-package com.zeroexcusas.zeroexcusas_app.algorithm.alx;
+package com.zeroexcusas.zeroexcusas_app.algorithm;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

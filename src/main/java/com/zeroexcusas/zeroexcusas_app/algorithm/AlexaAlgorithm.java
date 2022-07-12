@@ -1,14 +1,17 @@
-package com.zeroexcusas.zeroexcusas_app.algorithm.alx;
+package com.zeroexcusas.zeroexcusas_app.algorithm;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
+import com.zeroexcusas.zeroexcusas_app.algorithm.dto.SuggestResponse;
+import org.springframework.stereotype.Component;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
+@Component
 public class AlexaAlgorithm {
     private boolean _showTrace = false;
 
@@ -19,10 +22,45 @@ public class AlexaAlgorithm {
     public void loadFood(List<SimpleFood> proteins, List<SimpleFood> carbs, List<SimpleFood> fats) {
     }
 
-    private void loadFoodsFromMocks() {
+    public void loadFoodsFromMocks() {
         Gson gson = new GsonBuilder().setPrettyPrinting().create();
         Type listOfFoods = new TypeToken<ArrayList<SimpleFood>>(){}.getType();
+
+        System.out.println(MockData.dataNew);
+
         List<SimpleFood>foodList = gson.fromJson(MockData.dataNew, listOfFoods);
+        System.out.println(foodList.size());
+        this.__prepareFoodData(foodList);
+
+    }
+
+    private void __prepareFoodData(List<SimpleFood> foodList) {
+        for(SimpleFood mockFood : foodList) {
+            SimpleFood simpleFood = new SimpleFood();
+            simpleFood.setCarbsPerUnit(mockFood.getCarbsPerUnit());
+            simpleFood.setProteinPerUnit(mockFood.getProteinPerUnit());
+            simpleFood.setFatPerUnit(mockFood.getFatPerUnit());
+            simpleFood.setUnit(mockFood.getUnit());
+            simpleFood.setName(mockFood.getName());
+
+            if (mockFood.getMainType() == FoodType.CARB) {
+                simpleFood.setType(FoodType.CARB);
+                simpleFood.setName("Carb-"+this.carbs.size());
+                this.carbs.add(simpleFood);
+            }
+
+            if (mockFood.getMainType() == FoodType.PROTEIN) {
+                simpleFood.setType(FoodType.PROTEIN);
+                simpleFood.setName("Protein-"+this.proteins.size());
+                this.proteins.add(simpleFood);
+            }
+            if (mockFood.getMainType() == FoodType.FAT) {
+                simpleFood.setType(FoodType.FAT);
+                simpleFood.setName("FAT-"+this.fats.size());
+                this.fats.add(simpleFood);
+            }
+        }
+        System.out.println("data is loaded");
     }
 
     private FoodCombinationDTO combineMoreThanOneFood(double foodRation, int nutriens, List<SimpleFood> foodList, FoodType foodType, int selectedFoodIndex, int units ) {
@@ -107,7 +145,7 @@ public class AlexaAlgorithm {
         // No hay respuesta valida
         return new FoodCombinationDTO(
                 1,
-                new int[-1],
+                new int[]{-1},
                 new double[]{-1}
         );
 
@@ -127,7 +165,7 @@ public class AlexaAlgorithm {
         return amount;
     }
 
-    public void suggestedFoods(double nutProt, double nutCarb, double nutFat, double numIterations, int epsilon, int porcProtMin, int porcCarbMin, int porcFatMin) {
+    public SuggestResponse suggestedFoods(double nutProt, double nutCarb, double nutFat, double numIterations, int epsilon, int porcProtMin, int porcCarbMin, int porcFatMin) {
 
         double KProt = 0;
         double KCarb = 0;
@@ -322,10 +360,12 @@ public class AlexaAlgorithm {
         // jacs-final
 
 
+        // Aca en este punto necesitamos definir las salidas
 
+        // Esta clase SuggestResponse es la que debe modificarse para que contenga las salidas que necesita
+        SuggestResponse suggestResponse = new SuggestResponse();
 
-
-
+        return suggestResponse;
     }
 
 
@@ -411,23 +451,18 @@ public class AlexaAlgorithm {
         int porcProtMin = 5;
         int porcCarbMin = 5;
         int porcFatMin = 5;
+        int previousIndex = 5;
 
 
         AlexaAlgorithm alg = new AlexaAlgorithm();
-        int previousIndex = 5;
-        List<Integer> selected = alg.getRandomFood(
-                previousIndex,
-                10,
-                2);
-//        for(int a : selected) {
-//            System.out.println("--> "+a);
-//        }
+
 
         // we load default data just for testing  purposes
         alg.loadFoodsFromMocks();
 
 
         // we set all data for m
+
         alg.suggestedFoods(nutProt, nutCarb,
                 nutFat, numInterationsMax, errorUmbral,
                 porcProtMin, porcCarbMin, porcFatMin);

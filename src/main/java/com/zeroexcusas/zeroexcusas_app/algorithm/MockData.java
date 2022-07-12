@@ -1,4 +1,4 @@
-package com.zeroexcusas.zeroexcusas_app.algorithm.alx;
+package com.zeroexcusas.zeroexcusas_app.algorithm;
 
 public class MockData {
     public static final String foodData = "[\n" +
