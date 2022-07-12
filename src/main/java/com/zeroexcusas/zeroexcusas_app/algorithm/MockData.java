@@ -1,6 +1,1251 @@
 package com.zeroexcusas.zeroexcusas_app.algorithm;
 
 public class MockData {
+
+    public static final String allFoods = "[\n" +
+            " {\n" +
+            "   \"name\": \"acelga\",\n" +
+            "   \"unit\": 100,\n" +
+            "   \"carbsPerUnit\": 4.1,\n" +
+            "   \"fatPerUnit\": 0.1,\n" +
+            "   \"proteinPerUnit\": 1.9,\n" +
+            "   \"category\": \"Carb\"\n" +
+            " },\n" +
+            " {\n" +
+            "   \"name\": \"Arandanos\",\n" +
+            "   \"unit\": 100,\n" +
+            "   \"carbsPerUnit\": 14.5,\n" +
+            "   \"fatPerUnit\": 0,\n" +
+            "   \"proteinPerUnit\": 1,\n" +
+            "   \"category\": \"Carb\"\n" +
+            " },\n" +
+            " {\n" +
+            "   \"name\": \"Arroz Blanco\",\n" +
+            "   \"unit\": 100,\n" +
+            "   \"carbsPerUnit\": 29,\n" +
+            "   \"fatPerUnit\": 7,\n" +
+            "   \"proteinPerUnit\": 0,\n" +
+            "   \"category\": \"Carb\"\n" +
+            " },\n" +
+            " {\n" +
+            "   \"name\": \"Arroz integral\",\n" +
+            "   \"unit\": 100,\n" +
+            "   \"carbsPerUnit\": 23,\n" +
+            "   \"fatPerUnit\": 1,\n" +
+            "   \"proteinPerUnit\": 3,\n" +
+            "   \"category\": \"Carb\"\n" +
+            " },\n" +
+            " {\n" +
+            "   \"name\": \"Avena\",\n" +
+            "   \"unit\": 100,\n" +
+            "   \"carbsPerUnit\": 67,\n" +
+            "   \"fatPerUnit\": 7,\n" +
+            "   \"proteinPerUnit\": 12,\n" +
+            "   \"category\": \"Carb\"\n" +
+            " },\n" +
+            " {\n" +
+            "   \"name\": \"Banana\",\n" +
+            "   \"unit\": 100,\n" +
+            "   \"carbsPerUnit\": 23,\n" +
+            "   \"fatPerUnit\": 0,\n" +
+            "   \"proteinPerUnit\": 1,\n" +
+            "   \"category\": \"Carb\"\n" +
+            " },\n" +
+            " {\n" +
+            "   \"name\": \"Batata\",\n" +
+            "   \"unit\": 100,\n" +
+            "   \"carbsPerUnit\": 20,\n" +
+            "   \"fatPerUnit\": 0,\n" +
+            "   \"proteinPerUnit\": 2,\n" +
+            "   \"category\": \"Carb\"\n" +
+            " },\n" +
+            " {\n" +
+            "   \"name\": \"berenjena\",\n" +
+            "   \"unit\": 100,\n" +
+            "   \"carbsPerUnit\": 8.7,\n" +
+            "   \"fatPerUnit\": 0.2,\n" +
+            "   \"proteinPerUnit\": 0.8,\n" +
+            "   \"category\": \"Carb\"\n" +
+            " },\n" +
+            " {\n" +
+            "   \"name\": \"Broccoli\",\n" +
+            "   \"unit\": 100,\n" +
+            "   \"carbsPerUnit\": 7,\n" +
+            "   \"fatPerUnit\": 0,\n" +
+            "   \"proteinPerUnit\": 3,\n" +
+            "   \"category\": \"Carb\"\n" +
+            " },\n" +
+            " {\n" +
+            "   \"name\": \"calabacín\",\n" +
+            "   \"unit\": 100,\n" +
+            "   \"carbsPerUnit\": 2.7,\n" +
+            "   \"fatPerUnit\": 0.4,\n" +
+            "   \"proteinPerUnit\": 1.1,\n" +
+            "   \"category\": \"Carb\"\n" +
+            " },\n" +
+            " {\n" +
+            "   \"name\": \"calabaza\",\n" +
+            "   \"unit\": 100,\n" +
+            "   \"carbsPerUnit\": 4.9,\n" +
+            "   \"fatPerUnit\": 0.1,\n" +
+            "   \"proteinPerUnit\": 0.7,\n" +
+            "   \"category\": \"Carb\"\n" +
+            " },\n" +
+            " {\n" +
+            "   \"name\": \"Cebolla\",\n" +
+            "   \"unit\": 100,\n" +
+            "   \"carbsPerUnit\": 8.8,\n" +
+            "   \"fatPerUnit\": 0.1,\n" +
+            "   \"proteinPerUnit\": 0.9,\n" +
+            "   \"category\": \"Carb\"\n" +
+            " },\n" +
+            " {\n" +
+            "   \"name\": \"Celery\",\n" +
+            "   \"unit\": 100,\n" +
+            "   \"carbsPerUnit\": 2.9,\n" +
+            "   \"fatPerUnit\": 0.2,\n" +
+            "   \"proteinPerUnit\": 0.7,\n" +
+            "   \"category\": \"Carb\"\n" +
+            " },\n" +
+            " {\n" +
+            "   \"name\": \"cerezas\",\n" +
+            "   \"unit\": 100,\n" +
+            "   \"carbsPerUnit\": 16,\n" +
+            "   \"fatPerUnit\": 0.2,\n" +
+            "   \"proteinPerUnit\": 1.1,\n" +
+            "   \"category\": \"Carb\"\n" +
+            " },\n" +
+            " {\n" +
+            "   \"name\": \"choclo (Maíz)\",\n" +
+            "   \"unit\": 100,\n" +
+            "   \"carbsPerUnit\": 18.6,\n" +
+            "   \"fatPerUnit\": 1.4,\n" +
+            "   \"proteinPerUnit\": 3.3,\n" +
+            "   \"category\": \"Carb\"\n" +
+            " },\n" +
+            " {\n" +
+            "   \"name\": \"ciruela\",\n" +
+            "   \"unit\": 100,\n" +
+            "   \"carbsPerUnit\": 11.4,\n" +
+            "   \"fatPerUnit\": 0.3,\n" +
+            "   \"proteinPerUnit\": 0.7,\n" +
+            "   \"category\": \"Carb\"\n" +
+            " },\n" +
+            " {\n" +
+            "   \"name\": \"Coles de brusellas\",\n" +
+            "   \"unit\": 100,\n" +
+            "   \"carbsPerUnit\": 9,\n" +
+            "   \"fatPerUnit\": 1,\n" +
+            "   \"proteinPerUnit\": 4,\n" +
+            "   \"category\": \"Carb\"\n" +
+            " },\n" +
+            " {\n" +
+            "   \"name\": \"Coliflor\",\n" +
+            "   \"unit\": 100,\n" +
+            "   \"carbsPerUnit\": 5,\n" +
+            "   \"fatPerUnit\": 0,\n" +
+            "   \"proteinPerUnit\": 2,\n" +
+            "   \"category\": \"Carb\"\n" +
+            " },\n" +
+            " {\n" +
+            "   \"name\": \"Cous-Cous\",\n" +
+            "   \"unit\": 100,\n" +
+            "   \"carbsPerUnit\": 23,\n" +
+            "   \"fatPerUnit\": 0,\n" +
+            "   \"proteinPerUnit\": 3.8,\n" +
+            "   \"category\": \"Carb\"\n" +
+            " },\n" +
+            " {\n" +
+            "   \"name\": \"dátiles\",\n" +
+            "   \"unit\": 100,\n" +
+            "   \"carbsPerUnit\": 75,\n" +
+            "   \"fatPerUnit\": 0.2,\n" +
+            "   \"proteinPerUnit\": 1.8,\n" +
+            "   \"category\": \"Carb\"\n" +
+            " },\n" +
+            " {\n" +
+            "   \"name\": \"Durazno\",\n" +
+            "   \"unit\": 100,\n" +
+            "   \"carbsPerUnit\": 10.1,\n" +
+            "   \"fatPerUnit\": 0.3,\n" +
+            "   \"proteinPerUnit\": 0.9,\n" +
+            "   \"category\": \"Carb\"\n" +
+            " },\n" +
+            " {\n" +
+            "   \"name\": \"Esparragos\",\n" +
+            "   \"unit\": 100,\n" +
+            "   \"carbsPerUnit\": 4,\n" +
+            "   \"fatPerUnit\": 0,\n" +
+            "   \"proteinPerUnit\": 2,\n" +
+            "   \"category\": \"Carb\"\n" +
+            " },\n" +
+            " {\n" +
+            "   \"name\": \"Espinaca\",\n" +
+            "   \"unit\": 100,\n" +
+            "   \"carbsPerUnit\": 4,\n" +
+            "   \"fatPerUnit\": 0,\n" +
+            "   \"proteinPerUnit\": 3,\n" +
+            "   \"category\": \"Carb\"\n" +
+            " },\n" +
+            " {\n" +
+            "   \"name\": \"fideos de arroz\",\n" +
+            "   \"unit\": 100,\n" +
+            "   \"carbsPerUnit\": 86.1,\n" +
+            "   \"fatPerUnit\": 0.1,\n" +
+            "   \"proteinPerUnit\": 0.2,\n" +
+            "   \"category\": \"Carb\"\n" +
+            " },\n" +
+            " {\n" +
+            "   \"name\": \"Fresas\",\n" +
+            "   \"unit\": 100,\n" +
+            "   \"carbsPerUnit\": 7,\n" +
+            "   \"fatPerUnit\": 0,\n" +
+            "   \"proteinPerUnit\": 1,\n" +
+            "   \"category\": \"Carb\"\n" +
+            " },\n" +
+            " {\n" +
+            "   \"name\": \"Frijoles Negros Cocinados\",\n" +
+            "   \"unit\": 100,\n" +
+            "   \"carbsPerUnit\": 22,\n" +
+            "   \"fatPerUnit\": 1,\n" +
+            "   \"proteinPerUnit\": 8,\n" +
+            "   \"category\": \"Carb\"\n" +
+            " },\n" +
+            " {\n" +
+            "   \"name\": \"Galleta de soda\",\n" +
+            "   \"unit\": 100,\n" +
+            "   \"carbsPerUnit\": 74,\n" +
+            "   \"fatPerUnit\": 9,\n" +
+            "   \"proteinPerUnit\": 10,\n" +
+            "   \"category\": \"Carb\"\n" +
+            " },\n" +
+            " {\n" +
+            "   \"name\": \"Garbanzos Cocinados\",\n" +
+            "   \"unit\": 100,\n" +
+            "   \"carbsPerUnit\": 27,\n" +
+            "   \"fatPerUnit\": 3,\n" +
+            "   \"proteinPerUnit\": 9,\n" +
+            "   \"category\": \"Carb\"\n" +
+            " },\n" +
+            " {\n" +
+            "   \"name\": \"granola\",\n" +
+            "   \"unit\": 100,\n" +
+            "   \"carbsPerUnit\": 53.9,\n" +
+            "   \"fatPerUnit\": 24.9,\n" +
+            "   \"proteinPerUnit\": 13.7,\n" +
+            "   \"category\": \"Carb\"\n" +
+            " },\n" +
+            " {\n" +
+            "   \"name\": \"guayaba\",\n" +
+            "   \"unit\": 100,\n" +
+            "   \"carbsPerUnit\": 5,\n" +
+            "   \"fatPerUnit\": 0,\n" +
+            "   \"proteinPerUnit\": 0.3,\n" +
+            "   \"category\": \"Carb\"\n" +
+            " },\n" +
+            " {\n" +
+            "   \"name\": \"Guisantes\",\n" +
+            "   \"unit\": 100,\n" +
+            "   \"carbsPerUnit\": 27.4,\n" +
+            "   \"fatPerUnit\": 2.6,\n" +
+            "   \"proteinPerUnit\": 8.9,\n" +
+            "   \"category\": \"Carb\"\n" +
+            " },\n" +
+            " {\n" +
+            "   \"name\": \"Harina PAN\",\n" +
+            "   \"unit\": 100,\n" +
+            "   \"carbsPerUnit\": 80,\n" +
+            "   \"fatPerUnit\": 2,\n" +
+            "   \"proteinPerUnit\": 8,\n" +
+            "   \"category\": \"Carb\"\n" +
+            " },\n" +
+            " {\n" +
+            "   \"name\": \"higo\",\n" +
+            "   \"unit\": 100,\n" +
+            "   \"carbsPerUnit\": 19.2,\n" +
+            "   \"fatPerUnit\": 0.3,\n" +
+            "   \"proteinPerUnit\": 0.8,\n" +
+            "   \"category\": \"Carb\"\n" +
+            " },\n" +
+            " {\n" +
+            "   \"name\": \"Hongos\",\n" +
+            "   \"unit\": 100,\n" +
+            "   \"carbsPerUnit\": 3,\n" +
+            "   \"fatPerUnit\": 0,\n" +
+            "   \"proteinPerUnit\": 3,\n" +
+            "   \"category\": \"Carb\"\n" +
+            " },\n" +
+            " {\n" +
+            "   \"name\": \"Kale\",\n" +
+            "   \"unit\": 100,\n" +
+            "   \"carbsPerUnit\": 9,\n" +
+            "   \"fatPerUnit\": 1,\n" +
+            "   \"proteinPerUnit\": 4,\n" +
+            "   \"category\": \"Carb\"\n" +
+            " },\n" +
+            " {\n" +
+            "   \"name\": \"Kiwi\",\n" +
+            "   \"unit\": 100,\n" +
+            "   \"carbsPerUnit\": 10,\n" +
+            "   \"fatPerUnit\": 0.5,\n" +
+            "   \"proteinPerUnit\": 0,\n" +
+            "   \"category\": \"Carb\"\n" +
+            " },\n" +
+            " {\n" +
+            "   \"name\": \"leche de almendras sin azucar\",\n" +
+            "   \"unit\": 100,\n" +
+            "   \"carbsPerUnit\": 1.3,\n" +
+            "   \"fatPerUnit\": 1,\n" +
+            "   \"proteinPerUnit\": 0.4,\n" +
+            "   \"category\": \"Carb\"\n" +
+            " },\n" +
+            " {\n" +
+            "   \"name\": \"leche de arroz sin azucar\",\n" +
+            "   \"unit\": 100,\n" +
+            "   \"carbsPerUnit\": 9.1,\n" +
+            "   \"fatPerUnit\": 1,\n" +
+            "   \"proteinPerUnit\": 0.3,\n" +
+            "   \"category\": \"Carb\"\n" +
+            " },\n" +
+            " {\n" +
+            "   \"name\": \"leche de avena\",\n" +
+            "   \"unit\": 100,\n" +
+            "   \"carbsPerUnit\": 6.6,\n" +
+            "   \"fatPerUnit\": 2,\n" +
+            "   \"proteinPerUnit\": 1.2,\n" +
+            "   \"category\": \"Carb\"\n" +
+            " },\n" +
+            " {\n" +
+            "   \"name\": \"leche descremada\",\n" +
+            "   \"unit\": 100,\n" +
+            "   \"carbsPerUnit\": 4.9,\n" +
+            "   \"fatPerUnit\": 0,\n" +
+            "   \"proteinPerUnit\": 3.4,\n" +
+            "   \"category\": \"Carb\"\n" +
+            " },\n" +
+            " {\n" +
+            "   \"name\": \"Lentejas cocidas\",\n" +
+            "   \"unit\": 100,\n" +
+            "   \"carbsPerUnit\": 20.1,\n" +
+            "   \"fatPerUnit\": 0.4,\n" +
+            "   \"proteinPerUnit\": 9,\n" +
+            "   \"category\": \"Carb\"\n" +
+            " },\n" +
+            " {\n" +
+            "   \"name\": \"mandarina\",\n" +
+            "   \"unit\": 100,\n" +
+            "   \"carbsPerUnit\": 13.3,\n" +
+            "   \"fatPerUnit\": 0.3,\n" +
+            "   \"proteinPerUnit\": 0.8,\n" +
+            "   \"category\": \"Carb\"\n" +
+            " },\n" +
+            " {\n" +
+            "   \"name\": \"mango\",\n" +
+            "   \"unit\": 100,\n" +
+            "   \"carbsPerUnit\": 15,\n" +
+            "   \"fatPerUnit\": 0.4,\n" +
+            "   \"proteinPerUnit\": 0.3,\n" +
+            "   \"category\": \"Carb\"\n" +
+            " },\n" +
+            " {\n" +
+            "   \"name\": \"Manzana roja\",\n" +
+            "   \"unit\": 100,\n" +
+            "   \"carbsPerUnit\": 14,\n" +
+            "   \"fatPerUnit\": 0,\n" +
+            "   \"proteinPerUnit\": 0,\n" +
+            "   \"category\": \"Carb\"\n" +
+            " },\n" +
+            " {\n" +
+            "   \"name\": \"manzana verde\",\n" +
+            "   \"unit\": 100,\n" +
+            "   \"carbsPerUnit\": 13.6,\n" +
+            "   \"fatPerUnit\": 0,\n" +
+            "   \"proteinPerUnit\": 0.5,\n" +
+            "   \"category\": \"Carb\"\n" +
+            " },\n" +
+            " {\n" +
+            "   \"name\": \"melón\",\n" +
+            "   \"unit\": 100,\n" +
+            "   \"carbsPerUnit\": 8.2,\n" +
+            "   \"fatPerUnit\": 0.2,\n" +
+            "   \"proteinPerUnit\": 0.8,\n" +
+            "   \"category\": \"Carb\"\n" +
+            " },\n" +
+            " {\n" +
+            "   \"name\": \"Naranja\",\n" +
+            "   \"unit\": 100,\n" +
+            "   \"carbsPerUnit\": 25,\n" +
+            "   \"fatPerUnit\": 0.2,\n" +
+            "   \"proteinPerUnit\": 1.5,\n" +
+            "   \"category\": \"Carb\"\n" +
+            " },\n" +
+            " {\n" +
+            "   \"name\": \"Nopal (crudo - raw )\",\n" +
+            "   \"unit\": 100,\n" +
+            "   \"carbsPerUnit\": 3.3,\n" +
+            "   \"fatPerUnit\": 0,\n" +
+            "   \"proteinPerUnit\": 1.3,\n" +
+            "   \"category\": \"Carb\"\n" +
+            " },\n" +
+            " {\n" +
+            "   \"name\": \"Pan Blanco (1 rebanada)\",\n" +
+            "   \"unit\": 1,\n" +
+            "   \"carbsPerUnit\": 14.5,\n" +
+            "   \"fatPerUnit\": 1,\n" +
+            "   \"proteinPerUnit\": 2,\n" +
+            "   \"category\": \"Carb\"\n" +
+            " },\n" +
+            " {\n" +
+            "   \"name\": \"Pan Ezekiel 4:9 (1 rebanada)\",\n" +
+            "   \"unit\": 1,\n" +
+            "   \"carbsPerUnit\": 15,\n" +
+            "   \"fatPerUnit\": 0,\n" +
+            "   \"proteinPerUnit\": 4,\n" +
+            "   \"category\": \"Carb\"\n" +
+            " },\n" +
+            " {\n" +
+            "   \"name\": \"Pan integral - Whole wheat (1 rebanada)\",\n" +
+            "   \"unit\": 1,\n" +
+            "   \"carbsPerUnit\": 11,\n" +
+            "   \"fatPerUnit\": 1,\n" +
+            "   \"proteinPerUnit\": 3,\n" +
+            "   \"category\": \"Carb\"\n" +
+            " },\n" +
+            " {\n" +
+            "   \"name\": \"Pan Multigrano - Multigrain (1 rebanada)\",\n" +
+            "   \"unit\": 1,\n" +
+            "   \"carbsPerUnit\": 13,\n" +
+            "   \"fatPerUnit\": 3,\n" +
+            "   \"proteinPerUnit\": 1,\n" +
+            "   \"category\": \"Carb\"\n" +
+            " },\n" +
+            " {\n" +
+            "   \"name\": \"Pan Sourdough\",\n" +
+            "   \"unit\": 1,\n" +
+            "   \"carbsPerUnit\": 37,\n" +
+            "   \"fatPerUnit\": 1,\n" +
+            "   \"proteinPerUnit\": 1,\n" +
+            "   \"category\": \"Carb\"\n" +
+            " },\n" +
+            " {\n" +
+            "   \"name\": \"Papa\",\n" +
+            "   \"unit\": 100,\n" +
+            "   \"carbsPerUnit\": 21,\n" +
+            "   \"fatPerUnit\": 0,\n" +
+            "   \"proteinPerUnit\": 2,\n" +
+            "   \"category\": \"Carb\"\n" +
+            " },\n" +
+            " {\n" +
+            "   \"name\": \"papaya\",\n" +
+            "   \"unit\": 100,\n" +
+            "   \"carbsPerUnit\": 10.8,\n" +
+            "   \"fatPerUnit\": 0.3,\n" +
+            "   \"proteinPerUnit\": 0.5,\n" +
+            "   \"category\": \"Carb\"\n" +
+            " },\n" +
+            " {\n" +
+            "   \"name\": \"pasas de uvas (raisins)\",\n" +
+            "   \"unit\": 100,\n" +
+            "   \"carbsPerUnit\": 78.5,\n" +
+            "   \"fatPerUnit\": 0.5,\n" +
+            "   \"proteinPerUnit\": 2.5,\n" +
+            "   \"category\": \"Carb\"\n" +
+            " },\n" +
+            " {\n" +
+            "   \"name\": \"Pasta Cocinada\",\n" +
+            "   \"unit\": 100,\n" +
+            "   \"carbsPerUnit\": 30,\n" +
+            "   \"fatPerUnit\": 0.9,\n" +
+            "   \"proteinPerUnit\": 5.8,\n" +
+            "   \"category\": \"Carb\"\n" +
+            " },\n" +
+            " {\n" +
+            "   \"name\": \"pasta de legumbres\",\n" +
+            "   \"unit\": 100,\n" +
+            "   \"carbsPerUnit\": 67.8,\n" +
+            "   \"fatPerUnit\": 1.8,\n" +
+            "   \"proteinPerUnit\": 17.6,\n" +
+            "   \"category\": \"Carb\"\n" +
+            " },\n" +
+            " {\n" +
+            "   \"name\": \"pera\",\n" +
+            "   \"unit\": 100,\n" +
+            "   \"carbsPerUnit\": 15.2,\n" +
+            "   \"fatPerUnit\": 0.1,\n" +
+            "   \"proteinPerUnit\": 0.4,\n" +
+            "   \"category\": \"Carb\"\n" +
+            " },\n" +
+            " {\n" +
+            "   \"name\": \"Piña\",\n" +
+            "   \"unit\": 100,\n" +
+            "   \"carbsPerUnit\": 13.1,\n" +
+            "   \"fatPerUnit\": 0.1,\n" +
+            "   \"proteinPerUnit\": 0.5,\n" +
+            "   \"category\": \"Carb\"\n" +
+            " },\n" +
+            " {\n" +
+            "   \"name\": \"PLATANO cocido\",\n" +
+            "   \"unit\": 100,\n" +
+            "   \"carbsPerUnit\": 29.2,\n" +
+            "   \"fatPerUnit\": 0.1,\n" +
+            "   \"proteinPerUnit\": 1.1,\n" +
+            "   \"category\": \"Carb\"\n" +
+            " },\n" +
+            " {\n" +
+            "   \"name\": \"Pomelo\",\n" +
+            "   \"unit\": 100,\n" +
+            "   \"carbsPerUnit\": 10.7,\n" +
+            "   \"fatPerUnit\": 0.1,\n" +
+            "   \"proteinPerUnit\": 0.8,\n" +
+            "   \"category\": \"Carb\"\n" +
+            " },\n" +
+            " {\n" +
+            "   \"name\": \"Quinoa\",\n" +
+            "   \"unit\": 100,\n" +
+            "   \"carbsPerUnit\": 20,\n" +
+            "   \"fatPerUnit\": 2,\n" +
+            "   \"proteinPerUnit\": 3,\n" +
+            "   \"category\": \"Carb\"\n" +
+            " },\n" +
+            " {\n" +
+            "   \"name\": \"Rabano\",\n" +
+            "   \"unit\": 100,\n" +
+            "   \"carbsPerUnit\": 3.4,\n" +
+            "   \"fatPerUnit\": 0.1,\n" +
+            "   \"proteinPerUnit\": 0.7,\n" +
+            "   \"category\": \"Carb\"\n" +
+            " },\n" +
+            " {\n" +
+            "   \"name\": \"remolacha\",\n" +
+            "   \"unit\": 100,\n" +
+            "   \"carbsPerUnit\": 10,\n" +
+            "   \"fatPerUnit\": 0.2,\n" +
+            "   \"proteinPerUnit\": 1.7,\n" +
+            "   \"category\": \"Carb\"\n" +
+            " },\n" +
+            " {\n" +
+            "   \"name\": \"repollo blanco\",\n" +
+            "   \"unit\": 100,\n" +
+            "   \"carbsPerUnit\": 5.8,\n" +
+            "   \"fatPerUnit\": 0.1,\n" +
+            "   \"proteinPerUnit\": 1.3,\n" +
+            "   \"category\": \"Carb\"\n" +
+            " },\n" +
+            " {\n" +
+            "   \"name\": \"repollo colorado\",\n" +
+            "   \"unit\": 100,\n" +
+            "   \"carbsPerUnit\": 7.4,\n" +
+            "   \"fatPerUnit\": 0.2,\n" +
+            "   \"proteinPerUnit\": 1.4,\n" +
+            "   \"category\": \"Carb\"\n" +
+            " },\n" +
+            " {\n" +
+            "   \"name\": \"sandía\",\n" +
+            "   \"unit\": 100,\n" +
+            "   \"carbsPerUnit\": 7.6,\n" +
+            "   \"fatPerUnit\": 0.2,\n" +
+            "   \"proteinPerUnit\": 0.6,\n" +
+            "   \"category\": \"Carb\"\n" +
+            " },\n" +
+            " {\n" +
+            "   \"name\": \"Spring mix (Espinaca y lechuga)\",\n" +
+            "   \"unit\": 100,\n" +
+            "   \"carbsPerUnit\": 3.5,\n" +
+            "   \"fatPerUnit\": 0,\n" +
+            "   \"proteinPerUnit\": 2.4,\n" +
+            "   \"category\": \"Carb\"\n" +
+            " },\n" +
+            " {\n" +
+            "   \"name\": \"Tomates\",\n" +
+            "   \"unit\": 100,\n" +
+            "   \"carbsPerUnit\": 2,\n" +
+            "   \"fatPerUnit\": 0,\n" +
+            "   \"proteinPerUnit\": 1,\n" +
+            "   \"category\": \"Carb\"\n" +
+            " },\n" +
+            " {\n" +
+            "   \"name\": \"Torta de arroz inflado caramelo\",\n" +
+            "   \"unit\": 1,\n" +
+            "   \"carbsPerUnit\": 11,\n" +
+            "   \"fatPerUnit\": 2,\n" +
+            "   \"proteinPerUnit\": 1,\n" +
+            "   \"category\": \"Carb\"\n" +
+            " },\n" +
+            " {\n" +
+            "   \"name\": \"Torta de arroz inflado chocolate\",\n" +
+            "   \"unit\": 1,\n" +
+            "   \"carbsPerUnit\": 12,\n" +
+            "   \"fatPerUnit\": 1,\n" +
+            "   \"proteinPerUnit\": 0,\n" +
+            "   \"category\": \"Carb\"\n" +
+            " },\n" +
+            " {\n" +
+            "   \"name\": \"Torta de arroz inflado sin sabor\",\n" +
+            "   \"unit\": 1,\n" +
+            "   \"carbsPerUnit\": 14,\n" +
+            "   \"fatPerUnit\": 1,\n" +
+            "   \"proteinPerUnit\": 0,\n" +
+            "   \"category\": \"Carb\"\n" +
+            " },\n" +
+            " {\n" +
+            "   \"name\": \"Tortillas de Maiz Pequenas\",\n" +
+            "   \"unit\": 1,\n" +
+            "   \"carbsPerUnit\": 11,\n" +
+            "   \"fatPerUnit\": 1,\n" +
+            "   \"proteinPerUnit\": 1,\n" +
+            "   \"category\": \"Carb\"\n" +
+            " },\n" +
+            " {\n" +
+            "   \"name\": \"uvas\",\n" +
+            "   \"unit\": 100,\n" +
+            "   \"carbsPerUnit\": 18.1,\n" +
+            "   \"fatPerUnit\": 0.2,\n" +
+            "   \"proteinPerUnit\": 0.7,\n" +
+            "   \"category\": \"Carb\"\n" +
+            " },\n" +
+            " {\n" +
+            "   \"name\": \"vainitas\",\n" +
+            "   \"unit\": 100,\n" +
+            "   \"carbsPerUnit\": 7,\n" +
+            "   \"fatPerUnit\": 0,\n" +
+            "   \"proteinPerUnit\": 2,\n" +
+            "   \"category\": \"Carb\"\n" +
+            " },\n" +
+            " {\n" +
+            "   \"name\": \"Vegetales Mixtos Congelados Birdseye\",\n" +
+            "   \"unit\": 100,\n" +
+            "   \"carbsPerUnit\": 11.4,\n" +
+            "   \"fatPerUnit\": 0,\n" +
+            "   \"proteinPerUnit\": 2.3,\n" +
+            "   \"category\": \"Carb\"\n" +
+            " },\n" +
+            " {\n" +
+            "   \"name\": \"Vegetales Congelados California Blend Mix Birdseye\",\n" +
+            "   \"unit\": 100,\n" +
+            "   \"carbsPerUnit\": 6.4,\n" +
+            "   \"fatPerUnit\": 0,\n" +
+            "   \"proteinPerUnit\": 1.3,\n" +
+            "   \"category\": \"Carb\"\n" +
+            " },\n" +
+            " {\n" +
+            "   \"name\": \"Yuca\",\n" +
+            "   \"unit\": 100,\n" +
+            "   \"carbsPerUnit\": 27,\n" +
+            "   \"fatPerUnit\": 0.4,\n" +
+            "   \"proteinPerUnit\": 3,\n" +
+            "   \"category\": \"Carb\"\n" +
+            " },\n" +
+            " {\n" +
+            "   \"name\": \"zanahoria\",\n" +
+            "   \"unit\": 100,\n" +
+            "   \"carbsPerUnit\": 9.6,\n" +
+            "   \"fatPerUnit\": 0.2,\n" +
+            "   \"proteinPerUnit\": 0.9,\n" +
+            "   \"category\": \"Carb\"\n" +
+            " },\n" +
+            " {\n" +
+            "   \"name\": \"leche de merey/anacardos\",\n" +
+            "   \"unit\": 100,\n" +
+            "   \"carbsPerUnit\": 5.7,\n" +
+            "   \"fatPerUnit\": 5.3,\n" +
+            "   \"proteinPerUnit\": 2.2,\n" +
+            "   \"category\": \"Carb\"\n" +
+            " },\n" +
+            " {\n" +
+            "   \"name\": \"Atun  fresco cocido\",\n" +
+            "   \"unit\": 100,\n" +
+            "   \"carbsPerUnit\": 0,\n" +
+            "   \"fatPerUnit\": 10,\n" +
+            "   \"proteinPerUnit\": 25.5,\n" +
+            "   \"category\": \"Protein\"\n" +
+            " },\n" +
+            " {\n" +
+            "   \"name\": \"Atun  Crudo\",\n" +
+            "   \"unit\": 100,\n" +
+            "   \"carbsPerUnit\": 0,\n" +
+            "   \"fatPerUnit\": 5,\n" +
+            "   \"proteinPerUnit\": 23,\n" +
+            "   \"category\": \"Protein\"\n" +
+            " },\n" +
+            " {\n" +
+            "   \"name\": \"Atun enlatado en agua\",\n" +
+            "   \"unit\": 100,\n" +
+            "   \"carbsPerUnit\": 0.1,\n" +
+            "   \"fatPerUnit\": 0.9,\n" +
+            "   \"proteinPerUnit\": 19,\n" +
+            "   \"category\": \"Protein\"\n" +
+            " },\n" +
+            " {\n" +
+            "   \"name\": \"Bacalao cocido\",\n" +
+            "   \"unit\": 100,\n" +
+            "   \"carbsPerUnit\": 0,\n" +
+            "   \"fatPerUnit\": 0.3,\n" +
+            "   \"proteinPerUnit\": 20.4,\n" +
+            "   \"category\": \"Protein\"\n" +
+            " },\n" +
+            " {\n" +
+            "   \"name\": \"Camarones\",\n" +
+            "   \"unit\": 100,\n" +
+            "   \"carbsPerUnit\": 1.2,\n" +
+            "   \"fatPerUnit\": 1.3,\n" +
+            "   \"proteinPerUnit\": 17.4,\n" +
+            "   \"category\": \"Protein\"\n" +
+            " },\n" +
+            " {\n" +
+            "   \"name\": \"Carne de Res molida 93/7 (cocida)\",\n" +
+            "   \"unit\": 100,\n" +
+            "   \"carbsPerUnit\": 0,\n" +
+            "   \"fatPerUnit\": 8.4,\n" +
+            "   \"proteinPerUnit\": 27,\n" +
+            "   \"category\": \"Protein\"\n" +
+            " },\n" +
+            " {\n" +
+            "   \"name\": \"Cerdo - lomo. solomillo (chuletas) magro separable cocido\",\n" +
+            "   \"unit\": 100,\n" +
+            "   \"carbsPerUnit\": 0,\n" +
+            "   \"fatPerUnit\": 4.4,\n" +
+            "   \"proteinPerUnit\": 28.6,\n" +
+            "   \"category\": \"Protein\"\n" +
+            " },\n" +
+            " {\n" +
+            "   \"name\": \"Chuleta de lomo de cerdo\",\n" +
+            "   \"unit\": 100,\n" +
+            "   \"carbsPerUnit\": 0,\n" +
+            "   \"fatPerUnit\": 6.1,\n" +
+            "   \"proteinPerUnit\": 27.6,\n" +
+            "   \"category\": \"Protein\"\n" +
+            " },\n" +
+            " {\n" +
+            "   \"name\": \"Huevo completo\",\n" +
+            "   \"unit\": 1,\n" +
+            "   \"carbsPerUnit\": 1,\n" +
+            "   \"fatPerUnit\": 5,\n" +
+            "   \"proteinPerUnit\": 6,\n" +
+            "   \"category\": \"Protein\"\n" +
+            " },\n" +
+            " {\n" +
+            "   \"name\": \"Claras de huevo\",\n" +
+            "   \"unit\": 100,\n" +
+            "   \"carbsPerUnit\": 1,\n" +
+            "   \"fatPerUnit\": 0,\n" +
+            "   \"proteinPerUnit\": 11,\n" +
+            "   \"category\": \"Protein\"\n" +
+            " },\n" +
+            " {\n" +
+            "   \"name\": \"Costillas de cerdo magras (cocidas)\",\n" +
+            "   \"unit\": 100,\n" +
+            "   \"carbsPerUnit\": 0,\n" +
+            "   \"fatPerUnit\": 14.3,\n" +
+            "   \"proteinPerUnit\": 27.7,\n" +
+            "   \"category\": \"Protein\"\n" +
+            " },\n" +
+            " {\n" +
+            "   \"name\": \"Filtete de Flanco de Res cocido (Flank Steak)\",\n" +
+            "   \"unit\": 100,\n" +
+            "   \"carbsPerUnit\": 0,\n" +
+            "   \"fatPerUnit\": 16,\n" +
+            "   \"proteinPerUnit\": 27,\n" +
+            "   \"category\": \"Protein\"\n" +
+            " },\n" +
+            " {\n" +
+            "   \"name\": \"jamón cocido\",\n" +
+            "   \"unit\": 100,\n" +
+            "   \"carbsPerUnit\": 0.3,\n" +
+            "   \"fatPerUnit\": 8.3,\n" +
+            "   \"proteinPerUnit\": 27.8,\n" +
+            "   \"category\": \"Protein\"\n" +
+            " },\n" +
+            " {\n" +
+            "   \"name\": \"jamón de pavo\",\n" +
+            "   \"unit\": 100,\n" +
+            "   \"carbsPerUnit\": 7.7,\n" +
+            "   \"fatPerUnit\": 3,\n" +
+            "   \"proteinPerUnit\": 13.5,\n" +
+            "   \"category\": \"Protein\"\n" +
+            " },\n" +
+            " {\n" +
+            "   \"name\": \"leche de soja\",\n" +
+            "   \"unit\": 100,\n" +
+            "   \"carbsPerUnit\": 1.3,\n" +
+            "   \"fatPerUnit\": 2.1,\n" +
+            "   \"proteinPerUnit\": 3.6,\n" +
+            "   \"category\": \"Protein\"\n" +
+            " },\n" +
+            " {\n" +
+            "   \"name\": \"leche en polvo descremada\",\n" +
+            "   \"unit\": 100,\n" +
+            "   \"carbsPerUnit\": 22,\n" +
+            "   \"fatPerUnit\": 12,\n" +
+            "   \"proteinPerUnit\": 50,\n" +
+            "   \"category\": \"Protein\"\n" +
+            " },\n" +
+            " {\n" +
+            "   \"name\": \"Merluza cocida\",\n" +
+            "   \"unit\": 100,\n" +
+            "   \"carbsPerUnit\": 0,\n" +
+            "   \"fatPerUnit\": 0.6,\n" +
+            "   \"proteinPerUnit\": 20.5,\n" +
+            "   \"category\": \"Protein\"\n" +
+            " },\n" +
+            " {\n" +
+            "   \"name\": \"Pata-Muslo de pollo cocido sin piel\",\n" +
+            "   \"unit\": 100,\n" +
+            "   \"carbsPerUnit\": 0,\n" +
+            "   \"fatPerUnit\": 7.1,\n" +
+            "   \"proteinPerUnit\": 24.4,\n" +
+            "   \"category\": \"Protein\"\n" +
+            " },\n" +
+            " {\n" +
+            "   \"name\": \"Pavo Molida 93/7 (cocido)\",\n" +
+            "   \"unit\": 100,\n" +
+            "   \"carbsPerUnit\": 0,\n" +
+            "   \"fatPerUnit\": 14,\n" +
+            "   \"proteinPerUnit\": 28.6,\n" +
+            "   \"category\": \"Protein\"\n" +
+            " },\n" +
+            " {\n" +
+            "   \"name\": \"Pecho cocido de Res (Brisket)\",\n" +
+            "   \"unit\": 100,\n" +
+            "   \"carbsPerUnit\": 0,\n" +
+            "   \"fatPerUnit\": 7.1,\n" +
+            "   \"proteinPerUnit\": 34.5,\n" +
+            "   \"category\": \"Protein\"\n" +
+            " },\n" +
+            " {\n" +
+            "   \"name\": \"Pechuga de pavo (cocida)\",\n" +
+            "   \"unit\": 100,\n" +
+            "   \"carbsPerUnit\": 0,\n" +
+            "   \"fatPerUnit\": 2.1,\n" +
+            "   \"proteinPerUnit\": 30.1,\n" +
+            "   \"category\": \"Protein\"\n" +
+            " },\n" +
+            " {\n" +
+            "   \"name\": \"Pechuga de pollo (cocida)\",\n" +
+            "   \"unit\": 100,\n" +
+            "   \"carbsPerUnit\": 0,\n" +
+            "   \"fatPerUnit\": 3.2,\n" +
+            "   \"proteinPerUnit\": 30.5,\n" +
+            "   \"category\": \"Protein\"\n" +
+            " },\n" +
+            " {\n" +
+            "   \"name\": \"Queso muzzarella\",\n" +
+            "   \"unit\": 100,\n" +
+            "   \"carbsPerUnit\": 3.1,\n" +
+            "   \"fatPerUnit\": 17.1,\n" +
+            "   \"proteinPerUnit\": 27.5,\n" +
+            "   \"category\": \"Protein\"\n" +
+            " },\n" +
+            " {\n" +
+            "   \"name\": \"queso parmesano\",\n" +
+            "   \"unit\": 100,\n" +
+            "   \"carbsPerUnit\": 3.2,\n" +
+            "   \"fatPerUnit\": 25,\n" +
+            "   \"proteinPerUnit\": 35.8,\n" +
+            "   \"category\": \"Protein\"\n" +
+            " },\n" +
+            " {\n" +
+            "   \"name\": \"Pulpo cocido\",\n" +
+            "   \"unit\": 100,\n" +
+            "   \"carbsPerUnit\": 4.4,\n" +
+            "   \"fatPerUnit\": 2.1,\n" +
+            "   \"proteinPerUnit\": 29.8,\n" +
+            "   \"category\": \"Protein\"\n" +
+            " },\n" +
+            " {\n" +
+            "   \"name\": \"Queso untable de hasta 2 gr de grasa\",\n" +
+            "   \"unit\": 100,\n" +
+            "   \"carbsPerUnit\": 7.7,\n" +
+            "   \"fatPerUnit\": 1,\n" +
+            "   \"proteinPerUnit\": 15.7,\n" +
+            "   \"category\": \"Protein\"\n" +
+            " },\n" +
+            " {\n" +
+            "   \"name\": \"Requeson - Cottage cheese\",\n" +
+            "   \"unit\": 100,\n" +
+            "   \"carbsPerUnit\": 4.3,\n" +
+            "   \"fatPerUnit\": 2.3,\n" +
+            "   \"proteinPerUnit\": 11,\n" +
+            "   \"category\": \"Protein\"\n" +
+            " },\n" +
+            " {\n" +
+            "   \"name\": \"Rib Eye Steak\",\n" +
+            "   \"unit\": 100,\n" +
+            "   \"carbsPerUnit\": 0,\n" +
+            "   \"fatPerUnit\": 22,\n" +
+            "   \"proteinPerUnit\": 24,\n" +
+            "   \"category\": \"Protein\"\n" +
+            " },\n" +
+            " {\n" +
+            "   \"name\": \"Ricotta descremada\",\n" +
+            "   \"unit\": 100,\n" +
+            "   \"carbsPerUnit\": 4.3,\n" +
+            "   \"fatPerUnit\": 2.3,\n" +
+            "   \"proteinPerUnit\": 11,\n" +
+            "   \"category\": \"Protein\"\n" +
+            " },\n" +
+            " {\n" +
+            "   \"name\": \"Salmon  cocido\",\n" +
+            "   \"unit\": 100,\n" +
+            "   \"carbsPerUnit\": 0,\n" +
+            "   \"fatPerUnit\": 4.3,\n" +
+            "   \"proteinPerUnit\": 18.3,\n" +
+            "   \"category\": \"Protein\"\n" +
+            " },\n" +
+            " {\n" +
+            "   \"name\": \"Sardinas enlatadas en aceite\",\n" +
+            "   \"unit\": 100,\n" +
+            "   \"carbsPerUnit\": 0,\n" +
+            "   \"fatPerUnit\": 11.5,\n" +
+            "   \"proteinPerUnit\": 24.6,\n" +
+            "   \"category\": \"Protein\"\n" +
+            " },\n" +
+            " {\n" +
+            "   \"name\": \"Seitán\",\n" +
+            "   \"unit\": 100,\n" +
+            "   \"carbsPerUnit\": 9.5,\n" +
+            "   \"fatPerUnit\": 0.8,\n" +
+            "   \"proteinPerUnit\": 17.9,\n" +
+            "   \"category\": \"Protein\"\n" +
+            " },\n" +
+            " {\n" +
+            "   \"name\": \"soja texturizada orgánica\",\n" +
+            "   \"unit\": 100,\n" +
+            "   \"carbsPerUnit\": 28.6,\n" +
+            "   \"fatPerUnit\": 7.1,\n" +
+            "   \"proteinPerUnit\": 50,\n" +
+            "   \"category\": \"Protein\"\n" +
+            " },\n" +
+            " {\n" +
+            "   \"name\": \"Surimi\",\n" +
+            "   \"unit\": 100,\n" +
+            "   \"carbsPerUnit\": 6.6,\n" +
+            "   \"fatPerUnit\": 0.9,\n" +
+            "   \"proteinPerUnit\": 15.2,\n" +
+            "   \"category\": \"Protein\"\n" +
+            " },\n" +
+            " {\n" +
+            "   \"name\": \"Solomillo de res sin grasa cocido (Sirloin)\",\n" +
+            "   \"unit\": 100,\n" +
+            "   \"carbsPerUnit\": 0,\n" +
+            "   \"fatPerUnit\": 6.5,\n" +
+            "   \"proteinPerUnit\": 30.3,\n" +
+            "   \"category\": \"Protein\"\n" +
+            " },\n" +
+            " {\n" +
+            "   \"name\": \"Tilapia cocida\",\n" +
+            "   \"unit\": 100,\n" +
+            "   \"carbsPerUnit\": 0,\n" +
+            "   \"fatPerUnit\": 2.1,\n" +
+            "   \"proteinPerUnit\": 25.3,\n" +
+            "   \"category\": \"Protein\"\n" +
+            " },\n" +
+            " {\n" +
+            "   \"name\": \"Tofu\",\n" +
+            "   \"unit\": 100,\n" +
+            "   \"carbsPerUnit\": 3.4,\n" +
+            "   \"fatPerUnit\": 3.4,\n" +
+            "   \"proteinPerUnit\": 10.1,\n" +
+            "   \"category\": \"Protein\"\n" +
+            " },\n" +
+            " {\n" +
+            "   \"name\": \"Vastago de res cocido (Beef shank)\",\n" +
+            "   \"unit\": 100,\n" +
+            "   \"carbsPerUnit\": 0,\n" +
+            "   \"fatPerUnit\": 4.6,\n" +
+            "   \"proteinPerUnit\": 31.2,\n" +
+            "   \"category\": \"Protein\"\n" +
+            " },\n" +
+            " {\n" +
+            "   \"name\": \"Whey Protein\",\n" +
+            "   \"unit\": 100,\n" +
+            "   \"carbsPerUnit\": 10,\n" +
+            "   \"fatPerUnit\": 3,\n" +
+            "   \"proteinPerUnit\": 82,\n" +
+            "   \"category\": \"Protein\"\n" +
+            " },\n" +
+            " {\n" +
+            "   \"name\": \"Yogurt Griego descremado\",\n" +
+            "   \"unit\": 100,\n" +
+            "   \"carbsPerUnit\": 3.6,\n" +
+            "   \"fatPerUnit\": 0.4,\n" +
+            "   \"proteinPerUnit\": 10.3,\n" +
+            "   \"category\": \"Protein\"\n" +
+            " },\n" +
+            " {\n" +
+            "   \"name\": \"Yogurt Griego entero\",\n" +
+            "   \"unit\": 100,\n" +
+            "   \"carbsPerUnit\": 4,\n" +
+            "   \"fatPerUnit\": 5,\n" +
+            "   \"proteinPerUnit\": 9,\n" +
+            "   \"category\": \"Protein\"\n" +
+            " },\n" +
+            " {\n" +
+            "   \"name\": \"Aceite de Aguacate\",\n" +
+            "   \"unit\": 100,\n" +
+            "   \"carbsPerUnit\": 0,\n" +
+            "   \"fatPerUnit\": 100,\n" +
+            "   \"proteinPerUnit\": 0,\n" +
+            "   \"category\": \"Fat\"\n" +
+            " },\n" +
+            " {\n" +
+            "   \"name\": \"Aceite de coco\",\n" +
+            "   \"unit\": 100,\n" +
+            "   \"carbsPerUnit\": 0,\n" +
+            "   \"fatPerUnit\": 99.1,\n" +
+            "   \"proteinPerUnit\": 0,\n" +
+            "   \"category\": \"Fat\"\n" +
+            " },\n" +
+            " {\n" +
+            "   \"name\": \"Aceite de Oliva\",\n" +
+            "   \"unit\": 100,\n" +
+            "   \"carbsPerUnit\": 0,\n" +
+            "   \"fatPerUnit\": 100,\n" +
+            "   \"proteinPerUnit\": 0,\n" +
+            "   \"category\": \"Fat\"\n" +
+            " },\n" +
+            " {\n" +
+            "   \"name\": \"Aguacate\",\n" +
+            "   \"unit\": 100,\n" +
+            "   \"carbsPerUnit\": 10,\n" +
+            "   \"fatPerUnit\": 15,\n" +
+            "   \"proteinPerUnit\": 0,\n" +
+            "   \"category\": \"Fat\"\n" +
+            " },\n" +
+            " {\n" +
+            "   \"name\": \"Almendras\",\n" +
+            "   \"unit\": 100,\n" +
+            "   \"carbsPerUnit\": 21,\n" +
+            "   \"fatPerUnit\": 50,\n" +
+            "   \"proteinPerUnit\": 21,\n" +
+            "   \"category\": \"Fat\"\n" +
+            " },\n" +
+            " {\n" +
+            "   \"name\": \"Avellanas\",\n" +
+            "   \"unit\": 100,\n" +
+            "   \"carbsPerUnit\": 16.7,\n" +
+            "   \"fatPerUnit\": 60.8,\n" +
+            "   \"proteinPerUnit\": 15,\n" +
+            "   \"category\": \"Fat\"\n" +
+            " },\n" +
+            " {\n" +
+            "   \"name\": \"Castañas de Cajú / Anacardos\",\n" +
+            "   \"unit\": 100,\n" +
+            "   \"carbsPerUnit\": 30.2,\n" +
+            "   \"fatPerUnit\": 43.8,\n" +
+            "   \"proteinPerUnit\": 18.2,\n" +
+            "   \"category\": \"Fat\"\n" +
+            " },\n" +
+            " {\n" +
+            "   \"name\": \"Coco en escamas o rallado\",\n" +
+            "   \"unit\": 100,\n" +
+            "   \"carbsPerUnit\": 23.6,\n" +
+            "   \"fatPerUnit\": 64.5,\n" +
+            "   \"proteinPerUnit\": 6.9,\n" +
+            "   \"category\": \"Fat\"\n" +
+            " },\n" +
+            " {\n" +
+            "   \"name\": \"Crema Agria\",\n" +
+            "   \"unit\": 100,\n" +
+            "   \"carbsPerUnit\": 4.6,\n" +
+            "   \"fatPerUnit\": 19.4,\n" +
+            "   \"proteinPerUnit\": 2.4,\n" +
+            "   \"category\": \"Fat\"\n" +
+            " },\n" +
+            " {\n" +
+            "   \"name\": \"Edamame\",\n" +
+            "   \"unit\": 100,\n" +
+            "   \"carbsPerUnit\": 0,\n" +
+            "   \"fatPerUnit\": 100,\n" +
+            "   \"proteinPerUnit\": 0,\n" +
+            "   \"category\": \"Fat\"\n" +
+            " },\n" +
+            " {\n" +
+            "   \"name\": \"Harina de Almendras\",\n" +
+            "   \"unit\": 100,\n" +
+            "   \"carbsPerUnit\": 21.4,\n" +
+            "   \"fatPerUnit\": 53.6,\n" +
+            "   \"proteinPerUnit\": 21.4,\n" +
+            "   \"category\": \"Fat\"\n" +
+            " },\n" +
+            " {\n" +
+            "   \"name\": \"Huevo Completo\",\n" +
+            "   \"unit\": 1,\n" +
+            "   \"carbsPerUnit\": 1,\n" +
+            "   \"fatPerUnit\": 5,\n" +
+            "   \"proteinPerUnit\": 6,\n" +
+            "   \"category\": \"Fat\"\n" +
+            " },\n" +
+            " {\n" +
+            "   \"name\": \"leche de almendras\",\n" +
+            "   \"unit\": 100,\n" +
+            "   \"carbsPerUnit\": 0.3,\n" +
+            "   \"fatPerUnit\": 1.2,\n" +
+            "   \"proteinPerUnit\": 0.6,\n" +
+            "   \"category\": \"Fat\"\n" +
+            " },\n" +
+            " {\n" +
+            "   \"name\": \"leche de coco\",\n" +
+            "   \"unit\": 100,\n" +
+            "   \"carbsPerUnit\": 5.5,\n" +
+            "   \"fatPerUnit\": 23.8,\n" +
+            "   \"proteinPerUnit\": 2.3,\n" +
+            "   \"category\": \"Fat\"\n" +
+            " },\n" +
+            " {\n" +
+            "   \"name\": \"Mani\",\n" +
+            "   \"unit\": 100,\n" +
+            "   \"carbsPerUnit\": 18,\n" +
+            "   \"fatPerUnit\": 50,\n" +
+            "   \"proteinPerUnit\": 28,\n" +
+            "   \"category\": \"Fat\"\n" +
+            " },\n" +
+            " {\n" +
+            "   \"name\": \"Mantequilla de Mani\",\n" +
+            "   \"unit\": 100,\n" +
+            "   \"carbsPerUnit\": 24,\n" +
+            "   \"fatPerUnit\": 48,\n" +
+            "   \"proteinPerUnit\": 21,\n" +
+            "   \"category\": \"Fat\"\n" +
+            " },\n" +
+            " {\n" +
+            "   \"name\": \"Nueces\",\n" +
+            "   \"unit\": 100,\n" +
+            "   \"carbsPerUnit\": 13.7,\n" +
+            "   \"fatPerUnit\": 65.2,\n" +
+            "   \"proteinPerUnit\": 15.2,\n" +
+            "   \"category\": \"Fat\"\n" +
+            " },\n" +
+            " {\n" +
+            "   \"name\": \"olivas negras\",\n" +
+            "   \"unit\": 100,\n" +
+            "   \"carbsPerUnit\": 6,\n" +
+            "   \"fatPerUnit\": 10.9,\n" +
+            "   \"proteinPerUnit\": 0.8,\n" +
+            "   \"category\": \"Fat\"\n" +
+            " },\n" +
+            " {\n" +
+            "   \"name\": \"Olivas Verdes\",\n" +
+            "   \"unit\": 100,\n" +
+            "   \"carbsPerUnit\": 3.8,\n" +
+            "   \"fatPerUnit\": 15.3,\n" +
+            "   \"proteinPerUnit\": 1,\n" +
+            "   \"category\": \"Fat\"\n" +
+            " },\n" +
+            " {\n" +
+            "   \"name\": \"Pistacho\",\n" +
+            "   \"unit\": 100,\n" +
+            "   \"carbsPerUnit\": 27.2,\n" +
+            "   \"fatPerUnit\": 45.3,\n" +
+            "   \"proteinPerUnit\": 20.2,\n" +
+            "   \"category\": \"Fat\"\n" +
+            " },\n" +
+            " {\n" +
+            "   \"name\": \"Queso Americano\",\n" +
+            "   \"unit\": 100,\n" +
+            "   \"carbsPerUnit\": 2.7,\n" +
+            "   \"fatPerUnit\": 32,\n" +
+            "   \"proteinPerUnit\": 18,\n" +
+            "   \"category\": \"Fat\"\n" +
+            " },\n" +
+            " {\n" +
+            "   \"name\": \"queso brie\",\n" +
+            "   \"unit\": 100,\n" +
+            "   \"carbsPerUnit\": 0.5,\n" +
+            "   \"fatPerUnit\": 27.7,\n" +
+            "   \"proteinPerUnit\": 20.8,\n" +
+            "   \"category\": \"Fat\"\n" +
+            " },\n" +
+            " {\n" +
+            "   \"name\": \"Queso de Panela\",\n" +
+            "   \"unit\": 100,\n" +
+            "   \"carbsPerUnit\": 7,\n" +
+            "   \"fatPerUnit\": 23,\n" +
+            "   \"proteinPerUnit\": 17,\n" +
+            "   \"category\": \"Fat\"\n" +
+            " },\n" +
+            " {\n" +
+            "   \"name\": \"Queso Suizo\",\n" +
+            "   \"unit\": 100,\n" +
+            "   \"carbsPerUnit\": 5,\n" +
+            "   \"fatPerUnit\": 28,\n" +
+            "   \"proteinPerUnit\": 27,\n" +
+            "   \"category\": \"Fat\"\n" +
+            " },\n" +
+            " {\n" +
+            "   \"name\": \"Queso Cotija\",\n" +
+            "   \"unit\": 100,\n" +
+            "   \"carbsPerUnit\": 5,\n" +
+            "   \"fatPerUnit\": 30,\n" +
+            "   \"proteinPerUnit\": 20,\n" +
+            "   \"category\": \"Fat\"\n" +
+            " },\n" +
+            " {\n" +
+            "   \"name\": \"Salsa Verde Avocado Aderezo de Yogurt\",\n" +
+            "   \"unit\": 100,\n" +
+            "   \"carbsPerUnit\": 10,\n" +
+            "   \"fatPerUnit\": 11.7,\n" +
+            "   \"proteinPerUnit\": 3,\n" +
+            "   \"category\": \"Fat\"\n" +
+            " },\n" +
+            " {\n" +
+            "   \"name\": \"Semillas de Chia\",\n" +
+            "   \"unit\": 100,\n" +
+            "   \"carbsPerUnit\": 28.9,\n" +
+            "   \"fatPerUnit\": 42.2,\n" +
+            "   \"proteinPerUnit\": 18.3,\n" +
+            "   \"category\": \"Fat\"\n" +
+            " },\n" +
+            " {\n" +
+            "   \"name\": \"Semillas de Girasol\",\n" +
+            "   \"unit\": 100,\n" +
+            "   \"carbsPerUnit\": 20,\n" +
+            "   \"fatPerUnit\": 50,\n" +
+            "   \"proteinPerUnit\": 23,\n" +
+            "   \"category\": \"Fat\"\n" +
+            " },\n" +
+            " {\n" +
+            "   \"name\": \"Tocino de pavo\",\n" +
+            "   \"unit\": 100,\n" +
+            "   \"carbsPerUnit\": 5,\n" +
+            "   \"fatPerUnit\": 20,\n" +
+            "   \"proteinPerUnit\": 13,\n" +
+            "   \"category\": \"Fat\"\n" +
+            " },\n" +
+            " {\n" +
+            "   \"name\": \"aceite de palta\",\n" +
+            "   \"unit\": 100,\n" +
+            "   \"carbsPerUnit\": 0,\n" +
+            "   \"fatPerUnit\": 100,\n" +
+            "   \"proteinPerUnit\": 0,\n" +
+            "   \"category\": \"Fat\"\n" +
+            " },\n" +
+            " {\n" +
+            "   \"name\": \"mantequilla de almendras\",\n" +
+            "   \"unit\": 100,\n" +
+            "   \"carbsPerUnit\": 18.8,\n" +
+            "   \"fatPerUnit\": 55.5,\n" +
+            "   \"proteinPerUnit\": 21,\n" +
+            "   \"category\": \"Fat\"\n" +
+            " },\n" +
+            " {\n" +
+            "   \"name\": \"mantequilla de castañas de caju/anacardos\",\n" +
+            "   \"unit\": 100,\n" +
+            "   \"carbsPerUnit\": 27.6,\n" +
+            "   \"fatPerUnit\": 49.4,\n" +
+            "   \"proteinPerUnit\": 17.6,\n" +
+            "   \"category\": \"Fat\"\n" +
+            " },\n" +
+            " {\n" +
+            "   \"name\": \"Queso Crema Philadelphia light\",\n" +
+            "   \"unit\": 100,\n" +
+            "   \"carbsPerUnit\": 6.5,\n" +
+            "   \"fatPerUnit\": 19.4,\n" +
+            "   \"proteinPerUnit\": 6.5,\n" +
+            "   \"category\": \"Fat\"\n" +
+            " }\n" +
+            "]";
+
+
     public static final String foodData = "[\n" +
             "    {\n" +
             "        \"id\": \"coles-muslie-almond\",\n" +

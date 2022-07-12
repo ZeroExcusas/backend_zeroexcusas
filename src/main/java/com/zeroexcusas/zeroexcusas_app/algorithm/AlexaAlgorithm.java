@@ -26,9 +26,7 @@ public class AlexaAlgorithm {
         Gson gson = new GsonBuilder().setPrettyPrinting().create();
         Type listOfFoods = new TypeToken<ArrayList<SimpleFood>>(){}.getType();
 
-        System.out.println(MockData.dataNew);
-
-        List<SimpleFood>foodList = gson.fromJson(MockData.dataNew, listOfFoods);
+        List<SimpleFood>foodList = gson.fromJson(MockData.allFoods, listOfFoods);
         System.out.println(foodList.size());
         this.__prepareFoodData(foodList);
 

@@ -19,6 +19,8 @@ public class SimpleFood {
 
     double proteinPerUnit;
 
+    String category;
+
     public double getNutrient(FoodType foodType) {
 
         double result = 0;
