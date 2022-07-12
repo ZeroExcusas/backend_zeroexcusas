@@ -22,6 +22,9 @@ public class ZEStrings {
     public static final String MESSAGE_DELETE = "Elimina de la base de datos un registro basado en su llave unica (id)";
 
 
+    public static final String DESC_CALORIES = "Realiza el calculo de calorias a partir de un peso dado";
 
+    public static final String DESC_BMI = "Calculo del BMI tomando como referencia el peso y la altura";
 
+    public static final String DESC_BMR = "Calculo del BMR basado en la edad, altura, peso y sexo";
 }

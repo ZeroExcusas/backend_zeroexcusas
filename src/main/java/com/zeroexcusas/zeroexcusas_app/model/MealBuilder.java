@@ -1,6 +1,7 @@
 package com.zeroexcusas.zeroexcusas_app.model;
 
 import com.sun.istack.NotNull;
+import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Data;
 
 import javax.persistence.CascadeType;
@@ -27,6 +28,7 @@ public class MealBuilder
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     @NotNull
+    @Schema(accessMode = Schema.AccessMode.READ_ONLY)
     private int id;
 
     @Column(name = "datecreated")

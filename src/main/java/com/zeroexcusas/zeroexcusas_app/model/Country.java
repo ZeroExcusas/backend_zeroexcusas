@@ -1,6 +1,8 @@
 package com.zeroexcusas.zeroexcusas_app.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.sun.istack.NotNull;
+import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -24,6 +26,7 @@ public class Country
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     @NotNull
+    @Schema(accessMode = Schema.AccessMode.READ_ONLY)
     private int id;
 
     @Column(name = "name")
@@ -34,6 +37,7 @@ public class Country
     @NotNull
     private String phonecode;
 
+    @JsonIgnore
     @OneToMany( mappedBy = "_country", fetch = FetchType.LAZY, cascade = CascadeType.PERSIST )
     private List<User> _userList;
 }

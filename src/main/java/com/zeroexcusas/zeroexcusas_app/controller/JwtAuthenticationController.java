@@ -1,10 +1,9 @@
-package com.zeroexcusas.zeroexcusas_app.web;
+package com.zeroexcusas.zeroexcusas_app.controller;
 
 import com.zeroexcusas.zeroexcusas_app.config.JwtTokenUtil;
 import com.zeroexcusas.zeroexcusas_app.model.JwtRequest;
 import com.zeroexcusas.zeroexcusas_app.model.JwtResponse;
 import com.zeroexcusas.zeroexcusas_app.model.User;
-import com.zeroexcusas.zeroexcusas_app.model.UserDto;
 import com.zeroexcusas.zeroexcusas_app.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;

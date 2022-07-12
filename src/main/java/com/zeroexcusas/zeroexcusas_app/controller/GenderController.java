@@ -1,4 +1,4 @@
-package com.zeroexcusas.zeroexcusas_app.web;
+package com.zeroexcusas.zeroexcusas_app.controller;
 
 import com.zeroexcusas.zeroexcusas_app.common.ZEStrings;
 import com.zeroexcusas.zeroexcusas_app.model.Gender;

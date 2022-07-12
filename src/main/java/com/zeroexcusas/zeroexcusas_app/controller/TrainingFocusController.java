@@ -1,6 +1,5 @@
-package com.zeroexcusas.zeroexcusas_app.web;
+package com.zeroexcusas.zeroexcusas_app.controller;
 
-import com.zeroexcusas.zeroexcusas_app.model.ActivityLevel;
 import com.zeroexcusas.zeroexcusas_app.model.Goal;
 import com.zeroexcusas.zeroexcusas_app.model.TrainingFocus;
 import com.zeroexcusas.zeroexcusas_app.service.TrainingFocusService;

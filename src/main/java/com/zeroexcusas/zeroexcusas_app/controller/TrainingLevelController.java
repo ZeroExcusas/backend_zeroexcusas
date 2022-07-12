@@ -1,9 +1,12 @@
-package com.zeroexcusas.zeroexcusas_app.web;
+package com.zeroexcusas.zeroexcusas_app.controller;
 
+import com.zeroexcusas.zeroexcusas_app.common.ZEStrings;
 import com.zeroexcusas.zeroexcusas_app.model.Goal;
 import com.zeroexcusas.zeroexcusas_app.model.TrainingFocus;
 import com.zeroexcusas.zeroexcusas_app.model.TrainingLevel;
 import com.zeroexcusas.zeroexcusas_app.service.TrainingLevelService;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -14,37 +17,39 @@ import java.util.NoSuchElementException;
 
 @RestController
 @RequestMapping("/traininglevel/")
+@Tag(name = "Training Level / Nivel de Entrenamiento", description = "Descripcion del nivel de entrenamiento del usuario")
 public class TrainingLevelController {
 
     @Autowired
     TrainingLevelService trainingLevelService;
 
-    @GetMapping( "/gettrainingfocus" )
+    @GetMapping
+    @Operation(summary = ZEStrings.MESSAGE_GET_ALL)
     public List<TrainingLevel> list()
     {
         return trainingLevelService.listAllTrainingLevel();
     }
 
     @GetMapping( "/{id}" )
-    public ResponseEntity<TrainingLevel> get(@PathVariable Integer id )
-    {
-        try
-        {
+    @Operation(summary = ZEStrings.MESSAGE_GET_SIMPLE)
+    public ResponseEntity<TrainingLevel> get(@PathVariable Integer id ) {
+        try  {
             TrainingLevel trainingLevel = trainingLevelService.getTrainingLevel( id );
             return new ResponseEntity<TrainingLevel>( trainingLevel, HttpStatus.OK );
         }
-        catch ( NoSuchElementException e )
-        {
+        catch ( NoSuchElementException e ) {
             return new ResponseEntity<TrainingLevel>( HttpStatus.NOT_FOUND );
         }
     }
 
-    @RequestMapping( value = "/register", method = RequestMethod.POST )
+    @PostMapping
+    @Operation(summary = ZEStrings.MESSAGE_POST)
     public ResponseEntity<?> add(@RequestBody TrainingLevel trainingLevel) throws Exception{
         return ResponseEntity.ok( trainingLevelService.saveTrainingLevel( trainingLevel ));
     }
 
     @PutMapping("/{id}")
+    @Operation(summary = ZEStrings.MESSAGE_PUT)
     public ResponseEntity<?> update(@RequestBody TrainingLevel trainingLevel, @PathVariable Integer id) {
         try {
             TrainingLevel existTrainingLevel = trainingLevelService.getTrainingLevel( id );
@@ -65,6 +70,7 @@ public class TrainingLevelController {
     }
 
     @DeleteMapping("/{id}")
+    @Operation(summary = ZEStrings.MESSAGE_DELETE)
     public ResponseEntity<?> delete(@PathVariable Integer id) {
         try {
             TrainingLevel existTrainingLevel= trainingLevelService.getTrainingLevel( id );

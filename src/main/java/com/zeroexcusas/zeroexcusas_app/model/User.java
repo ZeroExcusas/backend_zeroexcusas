@@ -3,6 +3,7 @@ package com.zeroexcusas.zeroexcusas_app.model;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.sun.istack.NotNull;
+import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Data;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -32,6 +33,7 @@ public class User
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column( name = "id" )
     @NotNull
+    @Schema(accessMode = Schema.AccessMode.READ_ONLY)
     private int id;
 
     @Column( name = "first_name" )
